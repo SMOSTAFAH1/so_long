@@ -14,6 +14,13 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <limits.h>
+# include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 int		ft_atoi(const char *s);
 void	ft_bzero(void *s, size_t n);
@@ -54,6 +61,7 @@ void	ft_putnbr_fd(int n, int fd);
 typedef struct s_list
 {
 	void			*content;
+	unsigned int	index;
 	struct s_list	*next;
 }	t_list;
 
@@ -72,5 +80,22 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+char	*get_next_line(int fd);
+void	ft_read_line(int fd, char **keep, char **tmp);
+char	*ft_parse_line(char **keep, char **tmp);
+char	*get_before_newline(const char *s);
+char	*get_after_newline(const char *s);
+
+int		contains_newline(const char *s);
+char	*ft_strdup2(const char *s1);
+char	*ft_strjoin2(const char *s1, const char *s2);
+void	*ft_calloc2(size_t count, size_t size);
+void	ft_free_strs(char **str, char **str2, char **str3);
+
+int		ft_printf(char const *format, ...);
+void	ft_putnbr(int nbr, int *count);
+void	print_base(unsigned long long n, char *base, int base_len, int *count);
+void	ft_putstr(char *str, int *count);
 
 #endif

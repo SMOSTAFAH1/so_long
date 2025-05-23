@@ -9,7 +9,7 @@
 /*   Updated: 2024-10-01 11:28:02 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 /**
  * Checks if a string contains a newline character.
@@ -39,7 +39,7 @@ int	contains_newline(const char *s)
  * @return A new string that is the concatenation of s1 and s2,
  * or NULL if allocation fails.
  */
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin2(const char *s1, const char *s2)
 {
 	char	*s;
 	int		len;
@@ -71,7 +71,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
  * @param s1 The string to duplicate.
  * @return A new string that is a duplicate of s1, or NULL if allocation fails.
  */
-char	*ft_strdup(const char *s1)
+char	*ft_strdup2(const char *s1)
 {
 	char	*s2;
 	int		i;
@@ -100,7 +100,7 @@ char	*ft_strdup(const char *s1)
  * @param size The size of each element.
  * @return A pointer to the allocated memory, or NULL if allocation fails.
  */
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc2(size_t count, size_t size)
 {
 	void			*r;
 	unsigned char	*p;

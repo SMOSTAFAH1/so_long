@@ -9,7 +9,7 @@
 /*   Updated: 2024-10-01 11:32:41 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 /**
  * @brief Extrae y devuelve una nueva cadena que contiene los caracteres
