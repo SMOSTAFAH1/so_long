@@ -80,3 +80,37 @@ int	ft_printf(char const *format, ...)
 	va_end(argptr);
 	return (count);
 }
+
+void	ft_putstr(char *str, int *count)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		str = "(null)";
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+		(*count)++;
+	}
+}
+
+void	ft_putnbr(int nbr, int *count)
+{
+	char	c;
+	long	n;
+
+	n = nbr;
+	if (n < 0)
+	{
+		write(1, "-", 1);
+		(*count)++;
+		n = -n;
+	}
+	if (n > 9)
+		ft_putnbr(n / 10, count);
+	c = (n % 10) + '0';
+	write(1, &c, 1);
+	(*count)++;
+}

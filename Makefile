@@ -2,8 +2,8 @@ NAME		:= so_long
 CC			:= cc
 CFLAGS		:= -Wall -Wextra -Werror -g3 -I./minilibx-linux
 MLX			:= -L./minilibx-linux -lmlx -lXext -lX11
-SRCS		:= src/so_long.c src/map.c src/map_utils.c src/map_loader.c src/render_and_clean.c src/util.c \
-				src/util1.c src/util2.c src/util3.c src/ft_printf.c
+SRCS		:= src/so_long.c src/map.c src/map_utils.c src/map_loader.c src/render_and_clean.c \
+				src/string_utils.c src/get_next_line.c src/ft_printf.c src/memory_utils.c
 OBJS		:= $(SRCS:.c=.o)
 MAKEFLAGS	+= --no-print-directory
 

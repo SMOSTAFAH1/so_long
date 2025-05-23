@@ -92,30 +92,3 @@ void	ft_free_strs(char **str, char **str2, char **str3)
 		*str3 = NULL;
 	}
 }
-
-char	*ft_strjoin2(const char *s1, const char *s2)
-{
-	size_t	i;
-	size_t	len;
-	char	*s;
-
-	if (!s1 && !s2)
-		return (NULL);
-	if (!s1)
-		return (ft_strdup((char *)s2));
-	if (!s2)
-		return (ft_strdup((char *)s1));
-	i = ft_strlen(s1);
-	len = ft_strlen(s2);
-	s = ft_calloc(len + i + 1, sizeof * s);
-	if (!s)
-		return (NULL);
-	i = 0;
-	len = 0;
-	while (s1[i])
-		s[len++] = s1[i++];
-	i = 0;
-	while (s2[i])
-		s[len++] = s2[i++];
-	return (s);
-}

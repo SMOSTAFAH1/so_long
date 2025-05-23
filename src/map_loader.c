@@ -76,24 +76,3 @@ void	load_map(t_game *game, char *filename)
 	close(fd);
 	validate_map(game);
 }
-
-void	free_map(t_game *game)
-{
-	int	i;
-
-	if (game->map)
-	{
-		i = 0;
-		while (i < game->height)
-		{
-			if (game->map[i])
-			{
-				free(game->map[i]);
-				game->map[i] = NULL;
-			}
-			i++;
-		}
-		free(game->map);
-		game->map = NULL;
-	}
-}
