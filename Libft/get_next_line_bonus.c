@@ -113,10 +113,7 @@ void	ft_read_line(int fd, char **keep, char **tmp)
 			return ;
 		}
 		buf[r] = '\0';
-		if (*keep)
-			*tmp = ft_strdup(*keep);
-		else
-			*tmp = ft_strdup("");
+		*tmp = ft_strdup(*keep);
 		ft_free_strs(keep, 0, 0);
 		*keep = ft_strjoin(*tmp, buf);
 		ft_free_strs(tmp, 0, 0);
