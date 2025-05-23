@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 12:42:24 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/04 20:34:50 by rexposit         ###   ########.fr       */
+/*   Updated: 2025/03/05 10:00:00 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <stdarg.h>
 # include "minilibx-linux/mlx.h"
-# include "Libft/libft.h"
 # include <X11/keysym.h>
 # include <string.h>
 
@@ -31,6 +31,10 @@
 # define KEY_S XK_s
 # define KEY_D XK_d
 # define KEY_ESC XK_Escape
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 typedef struct s_game
 {
@@ -78,5 +82,35 @@ void	handle_movement(int key, int *new_x, int *new_y, t_game *game);
 int		check_remaining_collectibles(t_game *game);
 int		handle_interactions_and_move(t_game *game, int new_x, int new_y, int *moves);
 int		handle_keypress(int key, t_game *game);
+
+/* util.c */
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(char *src);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t count, size_t size);
+
+/* util1.c */
+char	*ft_strjoin(char const *s1, char const *s2);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+void	ft_free_strs(char **str, char **str2, char **str3);
+char	*ft_strjoin2(const char *s1, const char *s2);
+
+/* util2.c */
+int		contains_newline(const char *s);
+char	*get_before_newline(const char *s);
+char	*get_after_newline(const char *s);
+void	ft_read_line(int fd, char **keep, char **tmp);
+
+/* util3.c */
+char	*ft_parse_line(char **keep, char **tmp);
+char	*get_next_line(int fd);
+void	ft_putstr(char *str, int *count);
+void	ft_putnbr(int nbr, int *count);
+
+/* util4.c */
+void	print_base(unsigned long long n, char *base, int base_len, int *count);
+int		ft_printf(char const *format, ...);
 
 #endif
