@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   util3.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 10:00:00 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/05 10:00:00 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:33:31 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:33:31 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "so_long.h"
+#include "../so_long.h"
 
 char	*ft_parse_line(char **keep, char **tmp)
 {
@@ -80,4 +79,4 @@ void	ft_putnbr(int nbr, int *count)
 	c = (n % 10) + '0';
 	write(1, &c, 1);
 	(*count)++;
-} 
+}

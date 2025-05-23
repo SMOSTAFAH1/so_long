@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   util1.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 10:00:00 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/05 10:00:00 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:33:17 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:33:17 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "so_long.h"
+#include "../so_long.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -119,4 +118,4 @@ char	*ft_strjoin2(const char *s1, const char *s2)
 	while (s2[i])
 		s[len++] = s2[i++];
 	return (s);
-} 
+}

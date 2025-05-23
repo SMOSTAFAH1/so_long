@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 12:52:25 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/05 01:12:47 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:32:51 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:32:51 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "so_long.h"
+#include "../so_long.h"
 
 void	process_map_line(t_game *game, char *line, int y)
 {
@@ -48,7 +47,7 @@ void	check_collectible_and_border(t_game *game, int x, int y, int *c_cnt)
 	}
 }
 
-void	validate_map_characters(t_game *game, int *p_cnt,
+void	val_map_characters(t_game *game, int *p_cnt,
 	int *e_cnt, int *c_cnt)
 {
 	int	y;
@@ -107,7 +106,7 @@ void	validate_map(t_game *game)
 	e_cnt = 0;
 	c_cnt = 0;
 	check_map_validity(game);
-	validate_map_characters(game, &p_cnt, &e_cnt, &c_cnt);
+	val_map_characters(game, &p_cnt, &e_cnt, &c_cnt);
 	validate_map_elements(game, p_cnt, e_cnt, c_cnt);
 	if (!is_map_accessible(game))
 	{

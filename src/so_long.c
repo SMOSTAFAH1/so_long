@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 12:06:10 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/04 20:51:51 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:33:03 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:33:03 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "so_long.h"
+#include "../so_long.h"
 
 void	handle_movement(int key, int *new_x, int *new_y, t_game *game)
 {
@@ -48,7 +47,7 @@ int	check_remaining_collectibles(t_game *game)
 	return (0);
 }
 
-int	handle_interactions_and_move(t_game *game, int new_x, int new_y, int *moves)
+int	handle_interacts_move(t_game *game, int new_x, int new_y, int *moves)
 {
 	char	next_pos;
 
@@ -87,7 +86,7 @@ int	handle_keypress(int key, t_game *game)
 		&& key != KEY_D && key != KEY_ESC)
 		return (0);
 	handle_movement(key, &new_x, &new_y, game);
-	handle_interactions_and_move(game, new_x, new_y, &moves);
+	handle_interacts_move(game, new_x, new_y, &moves);
 	return (0);
 }
 

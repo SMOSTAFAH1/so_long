@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 12:42:24 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/05 10:00:00 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:12:07 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:12:07 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -54,14 +53,13 @@ typedef struct s_game
 
 /* map_loader.c */
 void	load_map(t_game *game, char *filename);
-void	process_map_file(t_game *game, int fd);
 int		count_map_lines(char *filename);
 
 /* map.c */
 void	process_map_line(t_game *game, char *line, int y);
 void	validate_map(t_game *game);
 void	validate_map_elements(t_game *game, int p_cnt, int e_cnt, int c_cnt);
-void	validate_map_characters(t_game *game, int *p_cnt, int *e_cnt, int *c_cnt);
+void	val_map_characters(t_game *game, int *p_cnt, int *e_cnt, int *c_cnt);
 void	check_collectible_and_border(t_game *game, int x, int y, int *c_cnt);
 
 /* map_utils.c */
@@ -80,7 +78,7 @@ int		clean_exit(t_game *game);
 /* so_long.c */
 void	handle_movement(int key, int *new_x, int *new_y, t_game *game);
 int		check_remaining_collectibles(t_game *game);
-int		handle_interactions_and_move(t_game *game, int new_x, int new_y, int *moves);
+int		handle_interacts_move(t_game *game, int new_x, int new_y, int *moves);
 int		handle_keypress(int key, t_game *game);
 
 /* util.c */
@@ -108,9 +106,6 @@ char	*ft_parse_line(char **keep, char **tmp);
 char	*get_next_line(int fd);
 void	ft_putstr(char *str, int *count);
 void	ft_putnbr(int nbr, int *count);
-
-/* util4.c */
-void	print_base(unsigned long long n, char *base, int base_len, int *count);
 int		ft_printf(char const *format, ...);
 
 #endif

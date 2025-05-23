@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   util2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 10:00:00 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/05 10:00:00 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:33:25 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:33:25 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "so_long.h"
+#include "../so_long.h"
 
 int	contains_newline(const char *s)
 {
@@ -105,4 +104,4 @@ void	ft_read_line(int fd, char **keep, char **tmp)
 			break ;
 	}
 	ft_free_strs(&buf, 0, 0);
-} 
+}

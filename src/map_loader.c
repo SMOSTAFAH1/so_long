@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   map_loader.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 14:22:56 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/04 20:47:45 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:32:21 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:32:21 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "so_long.h"
+#include "../so_long.h"
 
 int	count_map_lines(char *filename)
 {

@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   render_and_clean.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 14:10:37 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/04 20:43:45 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:32:57 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:32:57 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "so_long.h"
+#include "../so_long.h"
 
 void	load_textures(t_game *game)
 {
@@ -18,15 +17,15 @@ void	load_textures(t_game *game)
 	int	img_height;
 
 	game->wall = mlx_xpm_file_to_image(game->mlx,
-			"assets/wall.xpm", &img_width, &img_height);
+			"textures/wall.xpm", &img_width, &img_height);
 	game->floor = mlx_xpm_file_to_image(game->mlx,
-			"assets/floor.xpm", &img_width, &img_height);
+			"textures/floor.xpm", &img_width, &img_height);
 	game->player = mlx_xpm_file_to_image(game->mlx,
-			"assets/player.xpm", &img_width, &img_height);
+			"textures/player.xpm", &img_width, &img_height);
 	game->collectible = mlx_xpm_file_to_image(game->mlx,
-			"assets/collectible.xpm", &img_width, &img_height);
+			"textures/collectible.xpm", &img_width, &img_height);
 	game->exit = mlx_xpm_file_to_image(game->mlx,
-			"assets/exit.xpm", &img_width, &img_height);
+			"textures/exit.xpm", &img_width, &img_height);
 }
 
 void	render_map(t_game *game, int x, int y)

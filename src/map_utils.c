@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   map_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: shashemi <shashemi@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 14:00:53 by rexposit          #+#    #+#             */
-/*   Updated: 2025/03/05 01:15:51 by rexposit         ###   ########.fr       */
+/*   Created: 2025-05-23 20:32:32 by shashemi          #+#    #+#             */
+/*   Updated: 2025-05-23 20:32:32 by shashemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "so_long.h"
+#include "../so_long.h"
 
 void	check_map_validity(t_game *game)
 {
