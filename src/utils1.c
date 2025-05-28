@@ -21,7 +21,7 @@ void	display_move_counter(t_game *game)
 	moves_str = ft_itoa(game->moves);
 	if (!moves_str)
 		return ;
-	display_text = malloc(sizeof(char) * (12 + ft_strlen(moves_str) + 1));
+	display_text = malloc(sizeof(char) * (13 + ft_strlen(moves_str) + 1));
 	if (!display_text)
 	{
 		free(moves_str);

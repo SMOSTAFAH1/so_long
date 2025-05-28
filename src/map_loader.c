@@ -101,7 +101,7 @@ void	load_map(t_game *game, char *filename)
 	if (max_map_lines <= 0)
 		clean_exit(game, 0);
 	fd = open(filename, O_RDONLY);
-	if (fd < 0)
+	if (fd < 0 || !fd)
 		clean_exit(game, 0);
 	read_map_lines(game, fd, max_map_lines);
 	close(fd);
