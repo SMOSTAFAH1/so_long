@@ -89,8 +89,8 @@ void	update_player_evolution(t_game *game)
 
 int	has_collectibles(char **map)
 {
-	int y;
-	int x;
+	int	y;
+	int	x;
 
 	y = 0;
 	while (map[y])
