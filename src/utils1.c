@@ -86,3 +86,23 @@ void	update_player_evolution(t_game *game)
 	else if (game->collected_coins > 4)
 		write(1, "¡Has recogido una moneda! (Ya estás al máximo nivel)\n", 56);
 }
+
+int	has_collectibles(char **map)
+{
+	int y;
+	int x;
+
+	y = 0;
+	while (map[y])
+	{
+		x = 0;
+		while (map[y][x])
+		{
+			if (map[y][x] == 'C')
+				return (1);
+			x++;
+		}
+		y++;
+	}
+	return (0);
+}

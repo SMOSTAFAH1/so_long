@@ -44,6 +44,7 @@ typedef struct s_game
 	void	*enemy;
 }	t_game;
 
+int		has_collectibles(char **map);
 void	validate_map_characters(t_game *game);
 void	count_and_validate_elements(t_game *game);
 void	load_map(t_game *game, char *filename);
